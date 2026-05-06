@@ -1,0 +1,8 @@
+@import "../style-config/variable.scss";
+@import "../style-config/mixin.scss";
+
+.portfolio-content-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

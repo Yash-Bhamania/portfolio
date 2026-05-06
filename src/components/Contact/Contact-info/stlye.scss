@@ -1,0 +1,37 @@
+@import "../../style-config/mixin.scss";
+@import "../../style-config/variable.scss";
+
+.contact-info-box {
+    width: 100%;
+    padding: 15px;
+    border-radius: 6px;
+
+    color: $gray;
+    @include typography(18px, 400, 26px);
+    background-color: $black-lighter;
+    @include small-screen {
+        width: 355px;
+        padding: 30px;
+    }
+    h4 {
+        line-height: 28px;
+        margin-bottom: 20px;
+        // @include typography(18px, 400, 26px);
+        @include small-screen {
+            line-height: 34px;
+        }
+    }
+    .contact-option {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        svg {
+            color: $yellow;
+            font-style: 16px;
+        }
+        .text {
+            color: $white;
+            margin-left: 15px;
+        }
+    }
+}
