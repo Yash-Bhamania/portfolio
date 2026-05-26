@@ -33,13 +33,28 @@ const Skills = () => {
                     <CallToAction
                         text="Download CV"
                         icon={<AiOutlineCloudDownload />}
+                        // action={() => {
+                        //     console.log("Button is triggered");
+                        //     window.open("/Yash_Resume.pdf", "_blank");
+                        //     const link = document.createElement("a");
+                        //     link.href = "/Yash_Resume.pdf";
+                        //     link.download = "Yash_Resume.pdf";
+                        //     link.click();
+                        // }}
                         action={() => {
                             console.log("Button is triggered");
-                            window.open("/Yash_Resume.pdf", "_blank");
+
+                            const resumeUrl = `${process.env.PUBLIC_URL}/Yash_Resume.pdf`;
+
+                            window.open(resumeUrl, "_blank");
+
                             const link = document.createElement("a");
-                            link.href = "/Yash_Resume.pdf";
+                            link.href = resumeUrl;
                             link.download = "Yash_Resume.pdf";
+
+                            document.body.appendChild(link);
                             link.click();
+                            document.body.removeChild(link);
                         }}
                     />
                 </div>

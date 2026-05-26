@@ -3,9 +3,12 @@ import "./style.scss";
 import Arrow from "../../Shared/arrow";
 
 const BlogCard = ({ user, date, image, title, description }) => {
+
+    
     return (
         <div className="blog-card">
             <div className="img-section">
+                
                 <img
                     src={image}
                     alt={title}
