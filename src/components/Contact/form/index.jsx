@@ -14,7 +14,10 @@ const Form = () => {
     } = useForm();
 
     const onSubmit = (data) => {
-        send("service_pv8dycq", "template_pu7xxys", data, "4neHuHrd48karvO7k")
+// {console.log(data)}
+
+
+        send("service_zds95j7", "template_pu7xxys", data, "4neHuHrd48karvO7k")
             .then((response) => {
                 console.log("SUCCESS!", response.status, response.text);
                 formSuccess();

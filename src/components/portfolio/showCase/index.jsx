@@ -44,15 +44,19 @@ const [showModal, setShowModal] = useState(false);
                             src={project.media.thumbnail}
                             alt=""
                         />
-                        {console.log(project.link)}
+                 
 
                     </div>
                 ))};
 
 
                    {showModal && (
-                <div className="custom-modal">
-                    <div className="modal-content">
+                <div className="custom-modal"
+                onClick={()=>(setShowModal(false))}
+                >
+                    <div className="modal-content"
+                    onClick={(e)=>(e.stopPropagation())}
+                    >
 
                         <h2>Project Not Available</h2>
 
