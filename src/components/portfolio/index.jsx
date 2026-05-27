@@ -7,11 +7,12 @@ import ShowCase from "./showCase";
 const projectsData = [
     {
         id: 1,
-        name: "Healthy Food Restraunt",
+        name: "PG Life",
         tags: ["web-app", "mobile-app"],
         media: {
             thumbnail: require("../../images/portfolio/thumb-7.jpg"),
         },
+        link: "https://yash-bhamania.github.io/PG_Life/",
     },
     {
         id: 2,
@@ -20,6 +21,7 @@ const projectsData = [
         media: {
             thumbnail: require("../../images/portfolio/thumb-2.jpg"),
         },
+        link: "",
     },
     {
         id: 3,
@@ -28,6 +30,7 @@ const projectsData = [
         media: {
             thumbnail: require("../../images/portfolio/thumb-8.jpg"),
         },
+        link: "",
     },
     {
         id: 4,
@@ -36,6 +39,7 @@ const projectsData = [
         media: {
             thumbnail: require("../../images/portfolio/thumb-1.jpg"),
         },
+        link: "",
     },
     {
         id: 5,
@@ -44,6 +48,7 @@ const projectsData = [
         media: {
             thumbnail: require("../../images/portfolio/thumb-6.jpg"),
         },
+        link: "",
     },
     {
         id: 6,
@@ -52,6 +57,7 @@ const projectsData = [
         media: {
             thumbnail: require("../../images/portfolio/thumb-4.jpg"),
         },
+        link: "",
     },
     {
         id: 7,
@@ -60,6 +66,7 @@ const projectsData = [
         media: {
             thumbnail: require("../../images/portfolio/thumb-3.jpg"),
         },
+        link: "",
     },
     {
         id: 8,
@@ -68,6 +75,7 @@ const projectsData = [
         media: {
             thumbnail: require("../../images/portfolio/thumb-5.jpg"),
         },
+        link: "",
     },
 ];
 
