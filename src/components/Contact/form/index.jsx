@@ -24,6 +24,7 @@ const Form = () => {
             })
             .catch((err) => {
                 console.log("FAILED...", err);
+                toast.error("Failed to submit your query. Please try again later.");
             });
     };
 

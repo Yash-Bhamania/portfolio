@@ -2,7 +2,7 @@ import React from "react";
 import "./style.scss";
 import Hand from "../../../images/hand.png";
 import CallToAction from "../../Shared/CallToAction";
-import girl from "../../../images/girl.png";
+import girl from "../../../images/robo-removebg-preview.png";
 import { BsAwardFill } from "react-icons/bs";
 import { FaUser } from "react-icons/fa";
 import { scrollToSection } from "../../utils/helpers";
