@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.c1c84dc5.css",
-    "main.js": "/portfolio/static/js/main.b9baa34d.js",
-    "static/media/pglige.jpg": "/portfolio/static/media/pglige.fe1b8347ec000eeebcff.jpg",
+    "main.css": "/portfolio/static/css/main.2649b578.css",
+    "main.js": "/portfolio/static/js/main.3a3a1148.js",
     "static/media/blog-thumb-2.jpg": "/portfolio/static/media/blog-thumb-2.6ea419b38772d0c6685f.jpg",
     "static/media/blog-thumb-1.jpg": "/portfolio/static/media/blog-thumb-1.d299b4913f9d814f738d.jpg",
     "static/media/vector-background.png": "/portfolio/static/media/vector-background.17fff8ffdaaf3dcfe71c.png",
@@ -15,15 +14,16 @@
     "static/media/thumb-3.jpg": "/portfolio/static/media/thumb-3.7e550fc264d45366b663.jpg",
     "static/media/robo-removebg-preview.png": "/portfolio/static/media/robo-removebg-preview.42d97e331df1b22901cc.png",
     "static/media/tech-icons.png": "/portfolio/static/media/tech-icons.bba568408fb42fa031c8.png",
+    "static/media/thumb-7.jpg": "/portfolio/static/media/thumb-7.ce14c76ba50f932d14d4.jpg",
     "static/media/thumb-2.jpg": "/portfolio/static/media/thumb-2.5a21a5409f6da3f2ef9e.jpg",
     "static/media/cloud-soft.png": "/portfolio/static/media/cloud-soft.4a7c46b961e63488802b.png",
     "static/media/logo.svg": "/portfolio/static/media/logo.18add04313bb8a60375cce5e15f7b377.svg",
     "index.html": "/portfolio/index.html",
-    "main.c1c84dc5.css.map": "/portfolio/static/css/main.c1c84dc5.css.map",
-    "main.b9baa34d.js.map": "/portfolio/static/js/main.b9baa34d.js.map"
+    "main.2649b578.css.map": "/portfolio/static/css/main.2649b578.css.map",
+    "main.3a3a1148.js.map": "/portfolio/static/js/main.3a3a1148.js.map"
   },
   "entrypoints": [
-    "static/css/main.c1c84dc5.css",
-    "static/js/main.b9baa34d.js"
+    "static/css/main.2649b578.css",
+    "static/js/main.3a3a1148.js"
   ]
 }
