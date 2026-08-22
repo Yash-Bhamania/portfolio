@@ -21,7 +21,7 @@ const IntroContent = () => {
                                     alt=""
                                 />
                             </span>
-                            <span className="text">, I am Yassssh!</span>
+                            <span className="text">, I am Yash!</span>
                         </span>
                         <span className="big-text">Frontend Developer</span>
                     </h1>
