@@ -6,6 +6,7 @@ import Portfolio from "./components/portfolio";
 import Blogs from "./components/Blogs";
 import Contact from "./components/Contact";
 import Footer from "./components/footer";
+import WhatsApp from "./components/WhatsApp";
 
 const App = () => {
     return (
@@ -15,6 +16,7 @@ const App = () => {
             <Portfolio />
             <Blogs />
             <Contact />
+            <WhatsApp />
             <Footer />
         </div>
     );
