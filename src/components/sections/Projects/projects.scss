@@ -1,0 +1,275 @@
+@use "../../../styles/variables" as *;
+
+.projects {
+  padding: 120px 0;
+  border-top: 1px solid $color-border;
+
+  &__header {
+    max-width: 760px;
+    margin-bottom: 70px;
+  }
+
+  .section-label {
+    margin-bottom: 18px;
+    color: $color-primary;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+
+    span {
+      color: $color-text-secondary;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 40px;
+
+    padding: 48px 0;
+
+    border-top: 1px solid $color-border;
+
+    &:last-child {
+      border-bottom: 1px solid $color-border;
+    }
+
+    transition:
+      padding-left $transition,
+      background $transition;
+
+    &:hover {
+      padding-left: 12px;
+
+      .projects__arrow {
+        color: $color-primary;
+        transform: translate(4px, -4px);
+      }
+    }
+  }
+
+  &__number {
+    padding-top: 4px;
+    color: $color-text-secondary;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+  }
+
+  &__content {
+    min-width: 0;
+  }
+
+  &__title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  &__title-row h3 {
+    margin: 0 0 8px;
+    color: $color-text;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+  }
+
+  &__title-row p {
+    margin: 0;
+    color: $color-text-secondary;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  &__arrow {
+    flex-shrink: 0;
+
+    color: $color-text-secondary;
+    font-size: 1.5rem;
+
+    transition:
+      color $transition,
+      transform $transition;
+  }
+
+  &__description {
+    max-width: 720px;
+    margin: 24px 0;
+
+    color: $color-text-secondary;
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  &__technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__technologies span {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 11px;
+
+    border: 1px solid $color-border;
+    border-radius: 5px;
+
+    color: $color-text-secondary;
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    transition:
+      border-color $transition,
+      color $transition;
+  }
+
+  &__item:hover &__technologies span {
+    border-color: rgba(79, 124, 255, 0.25);
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 9px 14px;
+
+    border: 1px solid $color-border;
+    border-radius: 6px;
+
+    color: $color-text;
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    transition:
+      border-color $transition,
+      color $transition,
+      background $transition;
+
+    span {
+      font-size: 0.95rem;
+      transition: transform $transition;
+    }
+
+    &:hover {
+      border-color: $color-primary;
+      background: rgba(79, 124, 255, 0.05);
+      color: $color-primary;
+
+      span {
+        transform: translate(2px, -2px);
+      }
+    }
+
+    &--disabled {
+      cursor: not-allowed;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .projects {
+    padding: 90px 0;
+
+    &__item {
+      grid-template-columns: 60px minmax(0, 1fr);
+      gap: 24px;
+      padding: 40px 0;
+    }
+
+    &__description {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .projects {
+    padding: 80px 0;
+
+    &__header {
+      margin-bottom: 50px;
+    }
+
+    &__item {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 36px 0;
+
+      &:hover {
+        padding-left: 0;
+      }
+    }
+
+    &__number {
+      padding-top: 0;
+    }
+
+    &__title-row {
+      gap: 20px;
+    }
+
+    &__title-row h3 {
+      font-size: 1.45rem;
+    }
+
+    &__description {
+      margin: 20px 0;
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+
+    &__links {
+      margin-top: 20px;
+    }
+
+    &__link {
+      padding: 8px 12px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .projects {
+    &__title-row h3 {
+      font-size: 1.3rem;
+    }
+
+    &__arrow {
+      font-size: 1.2rem;
+    }
+
+    &__technologies span {
+      padding: 6px 9px;
+      font-size: 0.68rem;
+    }
+  }
+}

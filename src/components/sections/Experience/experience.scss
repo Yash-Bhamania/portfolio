@@ -1,0 +1,143 @@
+@use "../../../styles/variables" as *;
+
+.experience {
+  padding: 120px 0;
+  border-top: 1px solid $color-border;
+
+  &__header {
+    max-width: 760px;
+    margin-bottom: 70px;
+  }
+
+  .section-label {
+    margin-bottom: 18px;
+    color: $color-primary;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+
+    span {
+      color: $color-text-secondary;
+    }
+  }
+
+  &__list {
+    border-top: 1px solid $color-border;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 60px;
+    padding: 48px 0;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__number {
+    color: $color-primary;
+    font-family: monospace;
+    font-size: 0.8rem;
+  }
+
+  &__period {
+    color: $color-text-secondary;
+    font-size: 0.85rem;
+  }
+
+  &__content {
+    max-width: 850px;
+  }
+
+  &__title {
+    margin-bottom: 14px;
+
+    h3 {
+      margin-bottom: 5px;
+      font-size: 1.4rem;
+    }
+
+    p {
+      color: $color-primary;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+  }
+
+  &__description {
+    margin-bottom: 24px;
+    color: $color-text-secondary;
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  &__highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      color: $color-text-secondary;
+      font-size: 0.9rem;
+      line-height: 1.7;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0.75em;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $color-primary;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .experience {
+    padding: 90px 0;
+
+    &__item {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      padding: 40px 0;
+    }
+
+    &__meta {
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .experience {
+    padding: 70px 0;
+
+    &__title h3 {
+      font-size: 1.2rem;
+    }
+
+    &__highlights li {
+      font-size: 0.85rem;
+    }
+  }
+}

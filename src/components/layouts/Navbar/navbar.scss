@@ -1,0 +1,97 @@
+@use "../../../styles/variables" as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 20px 0;
+  background: rgba(8, 11, 18, 0.75);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid transparent;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+
+    span {
+      color: $color-primary;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    a {
+      position: relative;
+      color: $color-text-secondary;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color $transition;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 0;
+        height: 2px;
+        background: $color-primary;
+        transition: width $transition;
+      }
+
+      &:hover {
+        color: $color-text;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    padding: 10px 18px;
+    border: 1px solid rgba(79, 124, 255, 0.4);
+    border-radius: $radius-sm;
+    background: rgba(79, 124, 255, 0.1);
+    color: $color-text;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition:
+      background $transition,
+      border-color $transition,
+      transform $transition;
+
+    &:hover {
+      background: $color-primary;
+      border-color: $color-primary;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 0;
+
+    &__links {
+      display: none;
+    }
+
+    &__cta {
+      padding: 8px 14px;
+    }
+  }
+}

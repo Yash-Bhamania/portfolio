@@ -1,0 +1,245 @@
+@use "../../../styles/variables" as *;
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 140px 0 80px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -250px;
+    right: -150px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: rgba(79, 124, 255, 0.12);
+    filter: blur(100px);
+    pointer-events: none;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    align-items: center;
+    gap: 80px;
+  }
+
+  &__content {
+    max-width: 720px;
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+    color: $color-primary;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: $color-primary;
+    }
+  }
+
+  h1 {
+    margin-bottom: 24px;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.055em;
+    font-weight: 800;
+
+    span {
+      display: block;
+      color: $color-text-secondary;
+    }
+  }
+
+  &__description {
+    max-width: 620px;
+    margin-bottom: 36px;
+    color: $color-text-secondary;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 22px;
+    border-radius: $radius-sm;
+    font-weight: 600;
+    transition:
+      transform $transition,
+      background $transition,
+      border-color $transition;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    &--primary {
+      background: $color-primary;
+      color: $color-white;
+
+      &:hover {
+        background: #3b68e8;
+      }
+    }
+
+    &--secondary {
+      border: 1px solid $color-border;
+      background: $color-surface;
+      color: $color-text;
+
+      &:hover {
+        border-color: $color-primary;
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 24px;
+
+    a {
+      color: $color-text-secondary;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color $transition;
+
+      &:hover {
+        color: $color-text;
+      }
+    }
+  }
+
+  &__visual {
+    position: relative;
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__code-card {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 360px);
+    padding: 32px;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    background: rgba(17, 22, 32, 0.8);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(16px);
+    transform: rotate(3deg);
+
+    span {
+      display: block;
+      margin-bottom: 28px;
+      color: $color-primary;
+      font-family: monospace;
+      font-size: 1rem;
+    }
+
+    strong {
+      display: block;
+      padding: 14px 0;
+      border-bottom: 1px solid $color-border;
+      color: $color-text;
+      font-size: 1.1rem;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  &__orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(1px);
+
+    &--one {
+      width: 220px;
+      height: 220px;
+      background: rgba(79, 124, 255, 0.18);
+      top: 20px;
+      right: 20px;
+    }
+
+    &--two {
+      width: 140px;
+      height: 140px;
+      background: rgba(139, 92, 246, 0.18);
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding-top: 120px;
+
+    &__container {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+
+    &__visual {
+      min-height: 320px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 110px 0 60px;
+
+    h1 {
+      font-size: clamp(2.7rem, 14vw, 4rem);
+    }
+
+    &__description {
+      font-size: 1rem;
+    }
+
+    &__actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &__button {
+      width: 100%;
+    }
+
+    &__visual {
+      min-height: 280px;
+    }
+
+    &__code-card {
+      padding: 24px;
+    }
+  }
+}

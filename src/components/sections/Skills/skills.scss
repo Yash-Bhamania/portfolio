@@ -1,0 +1,110 @@
+@use "../../../styles/variables" as *;
+
+.skills {
+  padding: 120px 0;
+  background: $color-surface;
+  border-top: 1px solid $color-border;
+
+  &__header {
+    max-width: 700px;
+    margin-bottom: 60px;
+  }
+
+  .section-label {
+    margin-bottom: 18px;
+    color: $color-primary;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+
+    span {
+      color: $color-text-secondary;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  &__card {
+    padding: 32px;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    background: $color-bg;
+    transition:
+      border-color $transition,
+      transform $transition;
+
+    &:hover {
+      border-color: rgba(79, 124, 255, 0.5);
+      transform: translateY(-4px);
+    }
+  }
+
+  &__card-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__number {
+    color: $color-primary;
+    font-family: monospace;
+    font-size: 0.8rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  &__description {
+    margin-bottom: 24px;
+    color: $color-text-secondary;
+    font-size: 0.9rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    span {
+      padding: 7px 11px;
+      border: 1px solid $color-border;
+      border-radius: 6px;
+      background: $color-surface;
+      color: $color-text-secondary;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .skills {
+    padding: 90px 0;
+
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .skills {
+    padding: 70px 0;
+
+    &__card {
+      padding: 24px;
+    }
+  }
+}
