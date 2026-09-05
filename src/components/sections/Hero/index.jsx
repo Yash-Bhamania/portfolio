@@ -1,4 +1,6 @@
 import "./hero.scss";
+
+import heroImage from "../../../assets/Hero_section.png";
 import resumeFile from "../../../assets/Yash_Softwere_Developer.pdf";
 
 function Hero() {
@@ -22,6 +24,7 @@ function Hero() {
   return (
     <section className="hero" id="home">
       <div className="container hero__container">
+        {/* Left Content */}
         <div className="hero__content">
           <p className="hero__eyebrow">Frontend / React Developer</p>
 
@@ -41,6 +44,7 @@ function Hero() {
               href="#projects"
               className="hero__button hero__button--primary"
             >
+              <span>↗</span>
               View My Work
             </a>
 
@@ -49,41 +53,124 @@ function Hero() {
               className="hero__button hero__button--secondary"
               onClick={handleResumeDownload}
             >
+              <span>↓</span>
               Download Resume
             </a>
           </div>
 
           <div className="hero__socials">
-            <a
-              href="https://github.com/Yash-Bhamania"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
+            <span className="hero__socials-label">Find me on</span>
 
-            <a
-              href="https://www.linkedin.com/in/yash-bhamania/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn
-            </a>
+            <div className="hero__socials-links">
+              <a
+                href="https://github.com/Yash-Bhamania"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
 
-            <a href="mailto:yashbhamania45@gmail.com">Email</a>
+              <a
+                href="https://www.linkedin.com/in/yash-bhamania/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+
+              <a href="mailto:yashbhamania45@gmail.com">Email</a>
+            </div>
           </div>
         </div>
 
+        {/* Right Visual */}
         <div className="hero__visual" aria-hidden="true">
-          <div className="hero__orb hero__orb--one" />
-          <div className="hero__orb hero__orb--two" />
+          {/* Background glow */}
+          <div className="hero__glow" />
 
-          <div className="hero__code-card">
-            <span>&lt;developer /&gt;</span>
-            <strong>React.js</strong>
-            <strong>JavaScript</strong>
-            <strong>UI Development</strong>
+          {/* Orbit rings */}
+          <div className="hero__orbit hero__orbit--outer" />
+          <div className="hero__orbit hero__orbit--inner" />
+
+          {/* Portrait */}
+          <div className="hero__portrait">
+            <div className="hero__portrait-ring" />
+
+            <img src={heroImage} alt="" />
           </div>
+
+          {/* React badge */}
+          <div className="hero__tech hero__tech--react">
+            <span className="hero__tech-icon">⚛</span>
+
+            <div>
+              <strong>React</strong>
+              <small>Frontend</small>
+            </div>
+
+            <span className="hero__tech-dot" />
+          </div>
+
+          {/* JavaScript badge */}
+          <div className="hero__tech hero__tech--javascript">
+            <span className="hero__tech-icon hero__tech-icon--js">
+              JS
+            </span>
+
+            <div>
+              <strong>JavaScript</strong>
+              <small>Language</small>
+            </div>
+
+            <span className="hero__tech-dot" />
+          </div>
+
+          {/* Code badge */}
+          <div className="hero__code-badge">
+            &lt;/&gt;
+          </div>
+
+          {/* Developer card */}
+          <div className="hero__developer-card">
+            <div className="hero__developer-top">
+              <span>&lt;/&gt;</span>
+              <span>developer</span>
+            </div>
+
+            <div className="hero__developer-item">
+              <span className="hero__developer-icon">⚛</span>
+              <span>React.js</span>
+            </div>
+
+            <div className="hero__developer-item">
+              <span className="hero__developer-icon hero__developer-icon--js">
+                JS
+              </span>
+              <span>JavaScript</span>
+            </div>
+
+            <div className="hero__developer-item">
+              <span className="hero__developer-icon">&lt;/&gt;</span>
+              <span>UI Development</span>
+            </div>
+
+            <div className="hero__developer-item">
+              <span className="hero__developer-icon">◈</span>
+              <span>Responsive UI</span>
+            </div>
+          </div>
+
+          {/* Build / Learn / Improve */}
+          <div className="hero__message">
+            <span>Build</span>
+            <span>Learn</span>
+            <span>Improve</span>
+            <span>Repeat</span>
+          </div>
+
+          {/* Decorative dots */}
+          <div className="hero__dots hero__dots--one" />
+          <div className="hero__dots hero__dots--two" />
         </div>
       </div>
     </section>
