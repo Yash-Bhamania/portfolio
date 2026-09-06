@@ -18,7 +18,7 @@ const projects = [
     description:
       "A web platform for vehicle transportation workflows, built with React.js and a Node.js backend with MongoDB.",
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB"],
-    liveUrl: null,
+    liveUrl: "https://yash-bhamania.github.io/ShipNshift",
     githubUrl: "https://github.com/Yash-Bhamania/ShipNshift",
   },
   {
